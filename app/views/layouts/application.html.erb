@@ -32,10 +32,14 @@
       </div>
     </nav>
 
-    <p>
-      <%= flash["notice"] %>
-    </p>
+    <div class="container">
+      <% if flash["notice"] %>
+        <div class="alert alert-primary mt-3">
+          <%= flash["notice"] %>
+        </div>
+      <% end %>
 
     <%= yield %>
+    </div>
   </body>
 </html>
